@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Messages\**" />
+    <EmbeddedResource Remove="Messages\**" />
+    <None Remove="Messages\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dekacore.Domain" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Extension.PrimitiveType" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Persistence" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Persistence.EntityFramework" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Persistence.EntityFramework.Auditing" Version="8.1.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BC.TempateFull.Shared.Domain\BC.TempateFull.Shared.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClubIdentity.Contracts.Event" Version="1.0.31" />
+    <PackageReference Include="ClubIdentity.Core" Version="8.2.48" />
+    <PackageReference Include="Dekacore.Abstraction.Query" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Abstraction.SMSProvider" Version="8.4.0" />
+    <PackageReference Include="Dekacore.Abstraction.StorageProvider" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Messaging" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Extension.Mediator.Cache" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Extension.Mediator.Transaction" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Toolkit.IdGenerator.Snowflake" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Toolkit.SMSProvider.Jiring" Version="8.4.0" />
+    <PackageReference Include="Dekacore.Toolkit.StorageProvider.Ceph" Version="8.1.6" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.1.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
+    
+  </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Domain\BC.TempateFull.Domain\Ds.FleetManagement.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

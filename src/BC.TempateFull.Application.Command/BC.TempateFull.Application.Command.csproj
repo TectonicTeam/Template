@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClubIdentity.Contracts.Event" Version="1.0.31" />
+    <PackageReference Include="ClubIdentity.Core" Version="8.2.48" />
+    <PackageReference Include="DekaClub.Application.Contract" Version="8.0.33" />
+    <PackageReference Include="Dekacore.Abstraction.ExcelImportAndExport" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Abstraction.Query" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Abstraction.SMSProvider" Version="8.4.0" />
+    <PackageReference Include="Dekacore.Abstraction.StorageProvider" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Messaging" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Extension.Mediator.Cache" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Extension.Mediator.Transaction" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Toolkit.ExcelImportAndExport.ExcelDataReader" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Toolkit.IdGenerator.Snowflake" Version="8.1.6" />
+    <PackageReference Include="Dekacore.Toolkit.SMSProvider.Jiring" Version="8.4.0" />
+    <PackageReference Include="Dekacore.Toolkit.StorageProvider.Ceph" Version="8.1.6" />
+    <PackageReference Include="DekaForms.Contracts.Application" Version="8.0.16" />
+    <PackageReference Include="DekaForms.Contracts.Event" Version="8.0.17" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.1.2" />
+    <PackageReference Include="NCalcSync" Version="5.6.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
+    
+  </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ApplicationServices\" />
+      <Folder Include="Helper\" />
+      <Folder Include="Utilities\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BC.TempateFull.Contracts\BC.TempateFull.Application.Contracts.csproj" />
+      <ProjectReference Include="..\Domain\BC.TempateFull.Domain\BC.TempateFull.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

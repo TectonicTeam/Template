@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  supplierapi:
+    image: supplierapi
+    container_name: supplierapi
+    hostname: supplierapi
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    ports:
+      - 5002:80
+    build:
+      context: .
+      dockerfile: src/EndPoint/Em.Ms.Supplier.EndPoint.Api/Dockerfile

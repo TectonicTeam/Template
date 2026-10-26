@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<Version>1.0.26</Version>
+    <!--<Version>$(PRODUCT_VERSION)</Version>-->
+	</PropertyGroup>
+
+	<ItemGroup>
+		
+		<PackageReference Include="ClubIdentity.Core" Version="8.2.35" />
+		<PackageReference Include="Dekacore.Abstraction.StorageProvider" Version="8.0.42" />
+		<PackageReference Include="Dekacore.Persistence" Version="8.0.42" />
+		<PackageReference Include="Dekacore.Toolkit.StorageProvider.Ceph" Version="8.0.42" />
+		<PackageReference Include="DotNetCore.CAP.Dashboard" Version="8.2.0" />
+		<PackageReference Include="DotNetCore.CAP.Kafka" Version="8.3.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
+		<PackageReference Include="Savorboard.CAP.InMemoryMessageQueue" Version="8.2.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+		</PackageReference>
+    <PackageReference Include="Dekacore.Web" Version="8.0.42" />
+    <PackageReference Include="Dekacore.Extension.Web" Version="8.0.42" />
+    <PackageReference Include="Dekacore.Abstraction.Query" Version="8.0.42" />
+    <PackageReference Include="Dekacore.Messaging.Bus.Cap" Version="8.0.42" />
+    <PackageReference Include="Dekacore.Messaging.Bus.Cap.SqlServer" Version="8.0.42" />
+    <PackageReference Include="Dekacore.Observability.Logging.Serilog" Version="8.0.42" />
+    <PackageReference Include="Dekacore.Observability.Metric.OpenTelemetry" Version="8.0.42" />
+
+  </ItemGroup>
+
+	
+
+	<ItemGroup>
+	  <Content Include="..\..\.dockerignore">
+	    <Link>.dockerignore</Link>
+	  </Content>
+	</ItemGroup>
+
+	
+
+	<ItemGroup>
+	  <ProjectReference Include="..\DekaWebHook.Application\DekaWebHook.Application.Command.csproj" />
+	  <ProjectReference Include="..\DekaWebHook.Infra.Persistence\DekaWebHook.Infra.Persistance.csproj" />
+	  <ProjectReference Include="..\DekaWebHook.Infra.Query\DekaWebHook.Infra.Query.csproj" />
+	</ItemGroup>
+
+	
+
+	<ItemGroup>
+	  <Content Update="appsettings.Production.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
+	
+
+	<ItemGroup>
+	  <Folder Include="Controllers\Clients\" />
+	</ItemGroup>
+
+</Project>

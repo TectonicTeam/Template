@@ -1,0 +1,27 @@
+﻿@Service.Api_HostAddress = https://localhost:6049
+@Identity.Api_HostAddress = http://10.0.91.12:9005
+
+
+// @name login
+POST {{Identity.Api_HostAddress}}/Clubs/Auth/GetToken
+Content-Type: application/json
+{
+  "dto": {
+    "userName": "09122273770",
+    "password": "Mxuy2359kd__DEKA__hemchw!_#J22ssf",
+    "rememberMe": true
+  }
+}
+
+###
+POST {{Service.Api_HostAddress}}/PassengerApp/Todo/CreateAnTodo
+Content-Type: application/json
+Authorization: Bearer {{login.response.body.$.token}}
+x-client-type: passengers
+{
+  "title": "todo 2",
+  "value": "test",
+  "tag": "TestTag",
+  "optionType": 0
+}
+
